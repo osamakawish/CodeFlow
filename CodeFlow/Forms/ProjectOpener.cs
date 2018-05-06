@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CodeFlow
+namespace CodeFlow.Forms
 {
-    public partial class Form1 : Form
+    public partial class ProjectOpener : Form
     {
-        public Form1()
+        public ProjectOpener()
         {
             InitializeComponent();
         }
