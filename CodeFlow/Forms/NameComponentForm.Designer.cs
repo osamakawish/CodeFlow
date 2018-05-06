@@ -1,6 +1,6 @@
 ﻿namespace CodeFlow.Forms
 {
-    partial class NameComponentForm
+    partial class NameComponentDialog
     {
         /// <summary>
         /// Required designer variable.

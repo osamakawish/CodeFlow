@@ -36,32 +36,33 @@
             // 
             // SaveFileButton
             // 
-            this.SaveFileButton.Location = new System.Drawing.Point(284, 137);
+            this.SaveFileButton.Location = new System.Drawing.Point(209, 137);
+            this.SaveFileButton.Margin = new System.Windows.Forms.Padding(200, 3, 200, 3);
             this.SaveFileButton.Name = "SaveFileButton";
-            this.SaveFileButton.Size = new System.Drawing.Size(75, 23);
+            this.SaveFileButton.Size = new System.Drawing.Size(382, 52);
             this.SaveFileButton.TabIndex = 0;
             this.SaveFileButton.Text = "Save";
             this.SaveFileButton.UseVisualStyleBackColor = true;
+            this.SaveFileButton.Click += new System.EventHandler(this.SaveFileButton_Click);
             // 
             // OpenFileButton
             // 
-            this.OpenFileButton.Location = new System.Drawing.Point(255, 222);
+            this.OpenFileButton.Location = new System.Drawing.Point(209, 235);
             this.OpenFileButton.Name = "OpenFileButton";
-            this.OpenFileButton.Size = new System.Drawing.Size(75, 23);
+            this.OpenFileButton.Size = new System.Drawing.Size(382, 66);
             this.OpenFileButton.TabIndex = 1;
             this.OpenFileButton.Text = "Open";
             this.OpenFileButton.UseVisualStyleBackColor = true;
+            this.OpenFileButton.Click += new System.EventHandler(this.OpenFileButton_Click);
             // 
             // OpenFileDialog
             // 
-            this.OpenFileDialog.DefaultExt = "cflow";
-            this.OpenFileDialog.Filter = "Codeflow files (*.cflow)|*.cflow|All files (*.*)|*.*";
+            this.OpenFileDialog.Filter = "CodeFlow files (*.cflow)|*.cflow|All files (*.*)|*.*";
             this.OpenFileDialog.Title = "Open File";
             // 
             // SaveFileDialog
             // 
-            this.SaveFileDialog.DefaultExt = "cflow";
-            this.SaveFileDialog.Filter = "Codeflow files (*.cflow)|*.cflow|All files (*.*)|*.*";
+            this.SaveFileDialog.Filter = "CodeFlow files (*.cflow)|*.cflow|All files (*.*)|*.*";
             this.SaveFileDialog.Title = "Save File";
             // 
             // ProjectOpener

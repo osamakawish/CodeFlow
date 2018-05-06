@@ -10,19 +10,27 @@ using System.Windows.Forms;
 
 namespace CodeFlow.Forms
 {
-    public partial class NameComponentForm : Form
+    public partial class NameComponentDialog : Form
     {
-        /// <summary>
-        /// 
-        /// </summary>
         private MainForm form;
 
-        public NameComponentForm(MainForm form)
+        /// <summary>
+        /// Dialog for naming a newly defined component.
+        /// </summary>
+        /// <param name="form"></param>
+        /// <param name="text"></param>
+        public NameComponentDialog(MainForm form, string text)
         {
             InitializeComponent();
             this.form = form;
+            RequestLabel.Text += ":\n" + text;
         }
 
+        /// <summary>
+        /// Only permits legal variable names as text changes.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void InputBox_TextChanged(object sender, EventArgs e)
         {
             string text = InputBox.Text; int length = text.Length;
@@ -80,13 +88,19 @@ namespace CodeFlow.Forms
             }
         }
 
+        /// <summary>
+        /// Changes the error label where there is an error in naming the component.
+        /// </summary>
+        /// <param name="v"></param>
         private void Error(string v) => ErrorLabel.Text = v;
 
-        private void RemoveLastChar(TextBox textBox)
-        {
+        /// <summary>
+        /// Remove the last character in the text box.
+        /// </summary>
+        /// <param name="textBox"></param>
+        private void RemoveLastChar(TextBox textBox) => 
             textBox.Text = textBox.Text.Remove(InputBox.TextLength - 1);
-        }
-
+        
         private void SubmitButton_Click(object sender, EventArgs e)
         {
             string name = InputBox.Text;

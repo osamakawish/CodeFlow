@@ -31,24 +31,24 @@
             this.HeadingLabel = new System.Windows.Forms.Label();
             this.MainInfoPanel = new System.Windows.Forms.Panel();
             this.MainPanel = new System.Windows.Forms.Panel();
+            this.ProjectnamePanel = new System.Windows.Forms.Panel();
+            this.ProjectnameButton = new System.Windows.Forms.Button();
             this.HeaderPanel = new System.Windows.Forms.Panel();
             this.ContentsPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.AddButton = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.MenuPanel = new System.Windows.Forms.Panel();
             this.CodeButton = new System.Windows.Forms.Button();
             this.CodeflowButton = new System.Windows.Forms.Button();
             this.MemberButton = new System.Windows.Forms.Button();
             this.ClassButton = new System.Windows.Forms.Button();
             this.DirectoryButton = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.ProjectnamePanel = new System.Windows.Forms.Panel();
-            this.ProjectnameButton = new System.Windows.Forms.Button();
             this.MainInfoPanel.SuspendLayout();
             this.MainPanel.SuspendLayout();
+            this.ProjectnamePanel.SuspendLayout();
             this.HeaderPanel.SuspendLayout();
             this.ContentsPanel.SuspendLayout();
             this.MenuPanel.SuspendLayout();
-            this.ProjectnamePanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // HeadingLabel
@@ -81,6 +81,31 @@
             this.MainPanel.Name = "MainPanel";
             this.MainPanel.Size = new System.Drawing.Size(671, 100);
             this.MainPanel.TabIndex = 1;
+            // 
+            // ProjectnamePanel
+            // 
+            this.ProjectnamePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.ProjectnamePanel.Controls.Add(this.ProjectnameButton);
+            this.ProjectnamePanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.ProjectnamePanel.Location = new System.Drawing.Point(0, 0);
+            this.ProjectnamePanel.Name = "ProjectnamePanel";
+            this.ProjectnamePanel.Size = new System.Drawing.Size(329, 100);
+            this.ProjectnamePanel.TabIndex = 0;
+            // 
+            // ProjectnameButton
+            // 
+            this.ProjectnameButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ProjectnameButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ProjectnameButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.ProjectnameButton.FlatAppearance.BorderSize = 12;
+            this.ProjectnameButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ProjectnameButton.Location = new System.Drawing.Point(0, 0);
+            this.ProjectnameButton.Name = "ProjectnameButton";
+            this.ProjectnameButton.Size = new System.Drawing.Size(329, 100);
+            this.ProjectnameButton.TabIndex = 0;
+            this.ProjectnameButton.Text = "Project";
+            this.ProjectnameButton.UseVisualStyleBackColor = false;
+            this.ProjectnameButton.Click += new System.EventHandler(this.ProjectnameButton_Click);
             // 
             // HeaderPanel
             // 
@@ -115,6 +140,18 @@
             this.AddButton.TabIndex = 0;
             this.AddButton.Text = "+";
             this.AddButton.UseVisualStyleBackColor = false;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Silver;
+            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button5.Font = new System.Drawing.Font("Alegreya Sans", 20F);
+            this.button5.Location = new System.Drawing.Point(3, 121);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(665, 112);
+            this.button5.TabIndex = 4;
+            this.button5.Text = "Test";
+            this.button5.UseVisualStyleBackColor = false;
             // 
             // MenuPanel
             // 
@@ -203,44 +240,6 @@
             this.DirectoryButton.TabIndex = 0;
             this.DirectoryButton.Text = "Directory";
             this.DirectoryButton.UseVisualStyleBackColor = false;
-            this.DirectoryButton.Visible = false;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.Silver;
-            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button5.Font = new System.Drawing.Font("Alegreya Sans", 20F);
-            this.button5.Location = new System.Drawing.Point(3, 121);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(665, 112);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Test";
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // ProjectnamePanel
-            // 
-            this.ProjectnamePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.ProjectnamePanel.Controls.Add(this.ProjectnameButton);
-            this.ProjectnamePanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ProjectnamePanel.Location = new System.Drawing.Point(0, 0);
-            this.ProjectnamePanel.Name = "ProjectnamePanel";
-            this.ProjectnamePanel.Size = new System.Drawing.Size(329, 100);
-            this.ProjectnamePanel.TabIndex = 0;
-            // 
-            // ProjectnameButton
-            // 
-            this.ProjectnameButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ProjectnameButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ProjectnameButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.ProjectnameButton.FlatAppearance.BorderSize = 12;
-            this.ProjectnameButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ProjectnameButton.Location = new System.Drawing.Point(0, 0);
-            this.ProjectnameButton.Name = "ProjectnameButton";
-            this.ProjectnameButton.Size = new System.Drawing.Size(329, 100);
-            this.ProjectnameButton.TabIndex = 0;
-            this.ProjectnameButton.Text = "Project";
-            this.ProjectnameButton.UseVisualStyleBackColor = false;
-            this.ProjectnameButton.Click += new System.EventHandler(this.ProjectnameButton_Click);
             // 
             // MainForm
             // 
@@ -258,10 +257,10 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.MainInfoPanel.ResumeLayout(false);
             this.MainPanel.ResumeLayout(false);
+            this.ProjectnamePanel.ResumeLayout(false);
             this.HeaderPanel.ResumeLayout(false);
             this.ContentsPanel.ResumeLayout(false);
             this.MenuPanel.ResumeLayout(false);
-            this.ProjectnamePanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

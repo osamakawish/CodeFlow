@@ -43,7 +43,7 @@ namespace CodeFlow
             Button button = (Button)s;
             
             // Request name for it.
-            new NameComponentForm(this).ShowDialog();
+            new NameComponentDialog(this, button.Text).ShowDialog();
         }
 
         internal void AddFlowComponent(object sender, string name)
@@ -78,7 +78,7 @@ namespace CodeFlow
 
         private void ProjectnameButton_Click(object sender, EventArgs e)
         {
-            new ProjectOpener().ShowDialog();
+            new ProjectOpener(false).ShowDialog();
         }
     }
 }
