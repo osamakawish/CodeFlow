@@ -78,7 +78,7 @@
             this.MainInfoPanel.Controls.Add(this.MainPanel);
             this.MainInfoPanel.Controls.Add(this.ProjectnamePanel);
             this.MainInfoPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.MainInfoPanel.Location = new System.Drawing.Point(0, 28);
+            this.MainInfoPanel.Location = new System.Drawing.Point(0, 31);
             this.MainInfoPanel.Name = "MainInfoPanel";
             this.MainInfoPanel.Size = new System.Drawing.Size(1000, 100);
             this.MainInfoPanel.TabIndex = 4;
@@ -117,9 +117,9 @@
             this.HeaderPanel.Controls.Add(this.ContentsPanel);
             this.HeaderPanel.Controls.Add(this.MenuPanel);
             this.HeaderPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.HeaderPanel.Location = new System.Drawing.Point(0, 128);
+            this.HeaderPanel.Location = new System.Drawing.Point(0, 131);
             this.HeaderPanel.Name = "HeaderPanel";
-            this.HeaderPanel.Size = new System.Drawing.Size(1000, 688);
+            this.HeaderPanel.Size = new System.Drawing.Size(1000, 685);
             this.HeaderPanel.TabIndex = 5;
             // 
             // ContentsPanel
@@ -130,7 +130,7 @@
             this.ContentsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ContentsPanel.Location = new System.Drawing.Point(329, 0);
             this.ContentsPanel.Name = "ContentsPanel";
-            this.ContentsPanel.Size = new System.Drawing.Size(671, 688);
+            this.ContentsPanel.Size = new System.Drawing.Size(671, 685);
             this.ContentsPanel.TabIndex = 1;
             this.ContentsPanel.SizeChanged += new System.EventHandler(this.ContentsPanel_SizeChanged);
             // 
@@ -169,7 +169,7 @@
             this.MenuPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuPanel.Location = new System.Drawing.Point(0, 0);
             this.MenuPanel.Name = "MenuPanel";
-            this.MenuPanel.Size = new System.Drawing.Size(329, 688);
+            this.MenuPanel.Size = new System.Drawing.Size(329, 685);
             this.MenuPanel.TabIndex = 0;
             // 
             // CodeButton
@@ -248,13 +248,14 @@
             // 
             // MenuStrip
             // 
+            this.MenuStrip.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.MenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.MenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.toolsToolStripMenuItem});
             this.MenuStrip.Location = new System.Drawing.Point(0, 0);
             this.MenuStrip.Name = "MenuStrip";
-            this.MenuStrip.Size = new System.Drawing.Size(1000, 28);
+            this.MenuStrip.Size = new System.Drawing.Size(1000, 31);
             this.MenuStrip.TabIndex = 6;
             this.MenuStrip.Text = "Menu Strip";
             // 
