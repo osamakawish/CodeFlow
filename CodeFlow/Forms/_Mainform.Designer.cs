@@ -32,6 +32,7 @@
             this.MainInfoPanel = new System.Windows.Forms.Panel();
             this.MainPanel = new System.Windows.Forms.Panel();
             this.ProjectnamePanel = new System.Windows.Forms.Panel();
+            this.ProjectnameLabel = new System.Windows.Forms.Label();
             this.HeaderPanel = new System.Windows.Forms.Panel();
             this.ContentsPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.AddButton = new System.Windows.Forms.Button();
@@ -42,20 +43,22 @@
             this.MemberButton = new System.Windows.Forms.Button();
             this.ClassButton = new System.Windows.Forms.Button();
             this.DirectoryButton = new System.Windows.Forms.Button();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.MenuStrip = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.appearanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ProjectnameLabel = new System.Windows.Forms.Label();
+            this.projectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.createToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lightToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainInfoPanel.SuspendLayout();
             this.MainPanel.SuspendLayout();
             this.ProjectnamePanel.SuspendLayout();
             this.HeaderPanel.SuspendLayout();
             this.ContentsPanel.SuspendLayout();
             this.MenuPanel.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
+            this.MenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // HeadingLabel
@@ -98,6 +101,16 @@
             this.ProjectnamePanel.Name = "ProjectnamePanel";
             this.ProjectnamePanel.Size = new System.Drawing.Size(329, 100);
             this.ProjectnamePanel.TabIndex = 0;
+            // 
+            // ProjectnameLabel
+            // 
+            this.ProjectnameLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ProjectnameLabel.Location = new System.Drawing.Point(0, 0);
+            this.ProjectnameLabel.Name = "ProjectnameLabel";
+            this.ProjectnameLabel.Size = new System.Drawing.Size(329, 100);
+            this.ProjectnameLabel.TabIndex = 0;
+            this.ProjectnameLabel.Text = "Go to File > Project to Open or Create a project.";
+            this.ProjectnameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // HeaderPanel
             // 
@@ -233,40 +246,25 @@
             this.DirectoryButton.Text = "Directory";
             this.DirectoryButton.UseVisualStyleBackColor = false;
             // 
-            // menuStrip1
+            // MenuStrip
             // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.MenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.toolsToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1000, 28);
-            this.menuStrip1.TabIndex = 6;
-            this.menuStrip1.Text = "menuStrip1";
+            this.MenuStrip.Location = new System.Drawing.Point(0, 0);
+            this.MenuStrip.Name = "MenuStrip";
+            this.MenuStrip.Size = new System.Drawing.Size(1000, 28);
+            this.MenuStrip.TabIndex = 6;
+            this.MenuStrip.Text = "Menu Strip";
             // 
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.openToolStripMenuItem,
-            this.saveToolStripMenuItem});
+            this.projectToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(44, 24);
             this.fileToolStripMenuItem.Text = "File";
-            // 
-            // saveToolStripMenuItem
-            // 
-            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl+S";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.saveToolStripMenuItem.Text = "Save";
-            // 
-            // openToolStripMenuItem
-            // 
-            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl+O";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.openToolStripMenuItem.Text = "Open";
             // 
             // toolsToolStripMenuItem
             // 
@@ -278,20 +276,56 @@
             // 
             // appearanceToolStripMenuItem
             // 
+            this.appearanceToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lightToolStripMenuItem});
             this.appearanceToolStripMenuItem.Name = "appearanceToolStripMenuItem";
+            this.appearanceToolStripMenuItem.ShortcutKeyDisplayString = "";
             this.appearanceToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.appearanceToolStripMenuItem.Text = "Appearance";
+            this.appearanceToolStripMenuItem.Text = "Theme";
             // 
-            // ProjectnameLabel
+            // projectToolStripMenuItem
             // 
-            this.ProjectnameLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ProjectnameLabel.Location = new System.Drawing.Point(0, 0);
-            this.ProjectnameLabel.Name = "ProjectnameLabel";
-            this.ProjectnameLabel.Size = new System.Drawing.Size(329, 100);
-            this.ProjectnameLabel.TabIndex = 0;
-            this.ProjectnameLabel.Text = "Go to File > Create to create a new project\r\nOr Go to File > Open to open an exis" +
-    "ting project";
-            this.ProjectnameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.projectToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.createToolStripMenuItem,
+            this.openToolStripMenuItem,
+            this.saveToolStripMenuItem});
+            this.projectToolStripMenuItem.Name = "projectToolStripMenuItem";
+            this.projectToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.projectToolStripMenuItem.Text = "Project";
+            // 
+            // createToolStripMenuItem
+            // 
+            this.createToolStripMenuItem.Name = "createToolStripMenuItem";
+            this.createToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl+N";
+            this.createToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
+            this.createToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.createToolStripMenuItem.Text = "Create";
+            // 
+            // openToolStripMenuItem
+            // 
+            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
+            this.openToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl+O";
+            this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.openToolStripMenuItem.Text = "Open";
+            // 
+            // saveToolStripMenuItem
+            // 
+            this.saveToolStripMenuItem.Enabled = false;
+            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            this.saveToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl+S";
+            this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.saveToolStripMenuItem.Text = "Save";
+            // 
+            // lightToolStripMenuItem
+            // 
+            this.lightToolStripMenuItem.Checked = true;
+            this.lightToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.lightToolStripMenuItem.Name = "lightToolStripMenuItem";
+            this.lightToolStripMenuItem.ShortcutKeyDisplayString = "";
+            this.lightToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.lightToolStripMenuItem.Text = "Light";
             // 
             // MainForm
             // 
@@ -300,10 +334,10 @@
             this.ClientSize = new System.Drawing.Size(1000, 816);
             this.Controls.Add(this.HeaderPanel);
             this.Controls.Add(this.MainInfoPanel);
-            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.MenuStrip);
             this.Font = new System.Drawing.Font("Alegreya Sans", 12F);
             this.KeyPreview = true;
-            this.MainMenuStrip = this.menuStrip1;
+            this.MainMenuStrip = this.MenuStrip;
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "MainForm";
             this.ShowIcon = false;
@@ -315,8 +349,8 @@
             this.HeaderPanel.ResumeLayout(false);
             this.ContentsPanel.ResumeLayout(false);
             this.MenuPanel.ResumeLayout(false);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.MenuStrip.ResumeLayout(false);
+            this.MenuStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -337,13 +371,16 @@
         private System.Windows.Forms.Button AddButton;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Panel ProjectnamePanel;
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip MenuStrip;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem appearanceToolStripMenuItem;
         private System.Windows.Forms.Label ProjectnameLabel;
+        private System.Windows.Forms.ToolStripMenuItem projectToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem createToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem lightToolStripMenuItem;
     }
 }
 
