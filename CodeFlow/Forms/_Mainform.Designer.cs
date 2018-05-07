@@ -32,7 +32,6 @@
             this.MainInfoPanel = new System.Windows.Forms.Panel();
             this.MainPanel = new System.Windows.Forms.Panel();
             this.ProjectnamePanel = new System.Windows.Forms.Panel();
-            this.ProjectnameButton = new System.Windows.Forms.Button();
             this.HeaderPanel = new System.Windows.Forms.Panel();
             this.ContentsPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.AddButton = new System.Windows.Forms.Button();
@@ -43,12 +42,20 @@
             this.MemberButton = new System.Windows.Forms.Button();
             this.ClassButton = new System.Windows.Forms.Button();
             this.DirectoryButton = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.appearanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ProjectnameLabel = new System.Windows.Forms.Label();
             this.MainInfoPanel.SuspendLayout();
             this.MainPanel.SuspendLayout();
             this.ProjectnamePanel.SuspendLayout();
             this.HeaderPanel.SuspendLayout();
             this.ContentsPanel.SuspendLayout();
             this.MenuPanel.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // HeadingLabel
@@ -68,7 +75,7 @@
             this.MainInfoPanel.Controls.Add(this.MainPanel);
             this.MainInfoPanel.Controls.Add(this.ProjectnamePanel);
             this.MainInfoPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.MainInfoPanel.Location = new System.Drawing.Point(0, 0);
+            this.MainInfoPanel.Location = new System.Drawing.Point(0, 28);
             this.MainInfoPanel.Name = "MainInfoPanel";
             this.MainInfoPanel.Size = new System.Drawing.Size(1000, 100);
             this.MainInfoPanel.TabIndex = 4;
@@ -85,36 +92,21 @@
             // ProjectnamePanel
             // 
             this.ProjectnamePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.ProjectnamePanel.Controls.Add(this.ProjectnameButton);
+            this.ProjectnamePanel.Controls.Add(this.ProjectnameLabel);
             this.ProjectnamePanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.ProjectnamePanel.Location = new System.Drawing.Point(0, 0);
             this.ProjectnamePanel.Name = "ProjectnamePanel";
             this.ProjectnamePanel.Size = new System.Drawing.Size(329, 100);
             this.ProjectnamePanel.TabIndex = 0;
             // 
-            // ProjectnameButton
-            // 
-            this.ProjectnameButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ProjectnameButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ProjectnameButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.ProjectnameButton.FlatAppearance.BorderSize = 12;
-            this.ProjectnameButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ProjectnameButton.Location = new System.Drawing.Point(0, 0);
-            this.ProjectnameButton.Name = "ProjectnameButton";
-            this.ProjectnameButton.Size = new System.Drawing.Size(329, 100);
-            this.ProjectnameButton.TabIndex = 0;
-            this.ProjectnameButton.Text = "Project";
-            this.ProjectnameButton.UseVisualStyleBackColor = false;
-            this.ProjectnameButton.Click += new System.EventHandler(this.ProjectnameButton_Click);
-            // 
             // HeaderPanel
             // 
             this.HeaderPanel.Controls.Add(this.ContentsPanel);
             this.HeaderPanel.Controls.Add(this.MenuPanel);
             this.HeaderPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.HeaderPanel.Location = new System.Drawing.Point(0, 100);
+            this.HeaderPanel.Location = new System.Drawing.Point(0, 128);
             this.HeaderPanel.Name = "HeaderPanel";
-            this.HeaderPanel.Size = new System.Drawing.Size(1000, 716);
+            this.HeaderPanel.Size = new System.Drawing.Size(1000, 688);
             this.HeaderPanel.TabIndex = 5;
             // 
             // ContentsPanel
@@ -125,7 +117,7 @@
             this.ContentsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ContentsPanel.Location = new System.Drawing.Point(329, 0);
             this.ContentsPanel.Name = "ContentsPanel";
-            this.ContentsPanel.Size = new System.Drawing.Size(671, 716);
+            this.ContentsPanel.Size = new System.Drawing.Size(671, 688);
             this.ContentsPanel.TabIndex = 1;
             this.ContentsPanel.SizeChanged += new System.EventHandler(this.ContentsPanel_SizeChanged);
             // 
@@ -164,7 +156,7 @@
             this.MenuPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuPanel.Location = new System.Drawing.Point(0, 0);
             this.MenuPanel.Name = "MenuPanel";
-            this.MenuPanel.Size = new System.Drawing.Size(329, 716);
+            this.MenuPanel.Size = new System.Drawing.Size(329, 688);
             this.MenuPanel.TabIndex = 0;
             // 
             // CodeButton
@@ -241,6 +233,66 @@
             this.DirectoryButton.Text = "Directory";
             this.DirectoryButton.UseVisualStyleBackColor = false;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem,
+            this.toolsToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1000, 28);
+            this.menuStrip1.TabIndex = 6;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.openToolStripMenuItem,
+            this.saveToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(44, 24);
+            this.fileToolStripMenuItem.Text = "File";
+            // 
+            // saveToolStripMenuItem
+            // 
+            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            this.saveToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl+S";
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.saveToolStripMenuItem.Text = "Save";
+            // 
+            // openToolStripMenuItem
+            // 
+            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
+            this.openToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl+O";
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.openToolStripMenuItem.Text = "Open";
+            // 
+            // toolsToolStripMenuItem
+            // 
+            this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.appearanceToolStripMenuItem});
+            this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(56, 24);
+            this.toolsToolStripMenuItem.Text = "Tools";
+            // 
+            // appearanceToolStripMenuItem
+            // 
+            this.appearanceToolStripMenuItem.Name = "appearanceToolStripMenuItem";
+            this.appearanceToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.appearanceToolStripMenuItem.Text = "Appearance";
+            // 
+            // ProjectnameLabel
+            // 
+            this.ProjectnameLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ProjectnameLabel.Location = new System.Drawing.Point(0, 0);
+            this.ProjectnameLabel.Name = "ProjectnameLabel";
+            this.ProjectnameLabel.Size = new System.Drawing.Size(329, 100);
+            this.ProjectnameLabel.TabIndex = 0;
+            this.ProjectnameLabel.Text = "Go to File > Create to create a new project\r\nOr Go to File > Open to open an exis" +
+    "ting project";
+            this.ProjectnameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 29F);
@@ -248,8 +300,10 @@
             this.ClientSize = new System.Drawing.Size(1000, 816);
             this.Controls.Add(this.HeaderPanel);
             this.Controls.Add(this.MainInfoPanel);
+            this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Alegreya Sans", 12F);
             this.KeyPreview = true;
+            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "MainForm";
             this.ShowIcon = false;
@@ -261,7 +315,10 @@
             this.HeaderPanel.ResumeLayout(false);
             this.ContentsPanel.ResumeLayout(false);
             this.MenuPanel.ResumeLayout(false);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -280,7 +337,13 @@
         private System.Windows.Forms.Button AddButton;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Panel ProjectnamePanel;
-        private System.Windows.Forms.Button ProjectnameButton;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem appearanceToolStripMenuItem;
+        private System.Windows.Forms.Label ProjectnameLabel;
     }
 }
 
