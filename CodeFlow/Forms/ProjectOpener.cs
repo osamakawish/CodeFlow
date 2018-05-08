@@ -13,14 +13,14 @@ namespace CodeFlow.Forms
     public partial class ProjectOpener : Form
     {
         /// <summary>
-        /// True iff a file is open.
+        /// True if a file is open. False otherwise.
         /// </summary>
         private bool fileOpen;
 
         /// <summary>
         /// Form for opening and saving projects.
         /// </summary>
-        /// <param name="fileOpen">True iff a file is open.</param>
+        /// <param name="fileOpen">True if a file is open in the main form. False otherwise.</param>
         public ProjectOpener(bool fileOpen)
         {
             InitializeComponent();

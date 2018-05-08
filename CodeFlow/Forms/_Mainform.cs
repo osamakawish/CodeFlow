@@ -5,16 +5,22 @@ using System.Windows.Forms;
 
 namespace CodeFlow
 {
+    public enum ComponentLayer { Project, Class, Field, Code }
+
     public partial class MainForm : Form
     {
         /// <summary>
-        /// Allows to get info for naming a new namespace or file.
+        /// Path to the project.
         /// </summary>
-        public string NameTransfer { get; set; }
+        public string path;
         /// <summary>
-        /// The set of taken names.
+        /// The set of taken names for components in the project.
         /// </summary>
         private HashSet<String> TakenNames { get; }
+        /// <summary>
+        /// The layer going into the project.
+        /// </summary>
+        private ComponentLayer currentLayer = ComponentLayer.Project;
 
         /// <summary>
         /// The main form of the application.
@@ -42,43 +48,62 @@ namespace CodeFlow
         {
             Button button = (Button)s;
             
-            // Request name for it.
+            // Request name for the new component.
             new NameComponentDialog(this, button.Text).ShowDialog();
         }
 
+        /// <summary>
+        /// Adds a flow component to the contents panel, and updates remaining data.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="name"></param>
         internal void AddFlowComponent(object sender, string name)
         {
-            AddName(name); 
+            AddName(name);
             // Also need to add button and do anything else when adding new flow component.
+            // - Add a box for the flow component in the contents section.
         }
 
         /// <summary>
         /// Adds to the list of taken names.
         /// </summary>
-        /// <param name="name"></param>
+        /// <param name="name">Another name that is now taken.</param>
         internal void AddName(string name) => TakenNames.Add(name);
 
         /// <summary>
-        /// Returns true iff the name has been used for a class, method, namesace, etc.
+        /// Returns true if the name has been used for a class, method, namesace, etc. False otherwise.
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
-        internal bool IsTakenName(string name)
-        {
-            return TakenNames.Contains(name);
-        }
+        internal bool IsTakenName(string name) => TakenNames.Contains(name);
 
         private void ContentsPanel_SizeChanged(object sender, EventArgs e)
         {
-            foreach (Control control in ContentsPanel.Controls)
+            foreach (System.Windows.Forms.Control control in ContentsPanel.Controls)
             {
                 control.Width = ContentsPanel.Width - control.Margin.Left - control.Margin.Right;
             }
         }
 
-        private void ProjectnameButton_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Names the project and updates variables.
+        /// </summary>
+        /// <param name="text"></param>
+        internal void SetProject(string text)
         {
-            new ProjectOpener(false).ShowDialog();
+            ProjectnameLabel.Text = text;
+            SaveMenuItem.Enabled = true;
+        }
+
+        private void ProjectnameButton_Click(object sender, EventArgs e) 
+            => new ProjectOpener(false).ShowDialog();
+
+        private void CreateProjectItem_Click(object sender, EventArgs e) 
+            => new ProjectCreator(this, false).ShowDialog();
+
+        private void ContentsPanel_ControlAdded(object sender, ControlEventArgs e)
+        {
+            // Make sure 
         }
     }
 }

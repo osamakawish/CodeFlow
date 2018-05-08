@@ -45,11 +45,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\FlowCell.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\FlowCell.Designer.cs">
+      <DependentUpon>FlowCell.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\NameComponentForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\NameComponentForm.Designer.cs">
       <DependentUpon>NameComponentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ProjectCreator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ProjectCreator.Designer.cs">
+      <DependentUpon>ProjectCreator.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ProjectOpener.cs">
       <SubType>Form</SubType>
@@ -67,6 +79,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\NameComponentForm.resx">
       <DependentUpon>NameComponentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ProjectCreator.resx">
+      <DependentUpon>ProjectCreator.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ProjectOpener.resx">
       <DependentUpon>ProjectOpener.cs</DependentUpon>
