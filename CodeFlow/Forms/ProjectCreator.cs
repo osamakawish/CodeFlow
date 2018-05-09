@@ -62,8 +62,7 @@ namespace CodeFlow.Forms
                 {
                     string fullpath = $"{path}\\{ProjectnameInput.Text}\\Project";
                     Directory.CreateDirectory(fullpath);
-                    MainForm.path = path;
-                    MainForm.SetProject(ProjectnameInput.Text);
+                    MainForm.SetProject(path, ProjectnameInput.Text);
 
                     // Make sure to add a new file here too.
 

@@ -10,9 +10,9 @@ namespace CodeFlow
     public partial class MainForm : Form
     {
         /// <summary>
-        /// Path to the project.
+        /// 
         /// </summary>
-        public string path;
+        private Project Project;
         /// <summary>
         /// The set of taken names for components in the project.
         /// </summary>
@@ -20,7 +20,7 @@ namespace CodeFlow
         /// <summary>
         /// The layer going into the project.
         /// </summary>
-        private ComponentLayer currentLayer = ComponentLayer.Project;
+        //private ComponentLayer currentLayer = ComponentLayer.Project;
 
         /// <summary>
         /// The main form of the application.
@@ -89,10 +89,13 @@ namespace CodeFlow
         /// Names the project and updates variables.
         /// </summary>
         /// <param name="text"></param>
-        internal void SetProject(string text)
+        internal void SetProject(string path, string name)
         {
-            ProjectnameLabel.Text = text;
+            Project = new Project(path, name);
+
+            ProjectnameLabel.Text = name;
             SaveMenuItem.Enabled = true;
+
         }
 
         private void ProjectnameButton_Click(object sender, EventArgs e) 
@@ -104,6 +107,11 @@ namespace CodeFlow
         private void ContentsPanel_ControlAdded(object sender, ControlEventArgs e)
         {
             // Make sure 
+        }
+
+        private void SettingsMenuItem_Click(object sender, EventArgs e)
+        {
+            new SettingsForm(ProjectSettings);
         }
     }
 }

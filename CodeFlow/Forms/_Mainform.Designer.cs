@@ -52,7 +52,7 @@
             this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.appearanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lightToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.SettingsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainInfoPanel.SuspendLayout();
             this.MainPanel.SuspendLayout();
@@ -280,7 +280,7 @@
             this.OpenProjectItem,
             this.SaveMenuItem});
             this.projectToolStripMenuItem.Name = "projectToolStripMenuItem";
-            this.projectToolStripMenuItem.Size = new System.Drawing.Size(216, 28);
+            this.projectToolStripMenuItem.Size = new System.Drawing.Size(139, 28);
             this.projectToolStripMenuItem.Text = "Project";
             // 
             // CreateProjectItem
@@ -288,7 +288,7 @@
             this.CreateProjectItem.Name = "CreateProjectItem";
             this.CreateProjectItem.ShortcutKeyDisplayString = "Ctrl+N";
             this.CreateProjectItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.CreateProjectItem.Size = new System.Drawing.Size(216, 28);
+            this.CreateProjectItem.Size = new System.Drawing.Size(198, 28);
             this.CreateProjectItem.Text = "Create";
             this.CreateProjectItem.Click += new System.EventHandler(this.CreateProjectItem_Click);
             // 
@@ -297,7 +297,7 @@
             this.OpenProjectItem.Name = "OpenProjectItem";
             this.OpenProjectItem.ShortcutKeyDisplayString = "Ctrl+O";
             this.OpenProjectItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.OpenProjectItem.Size = new System.Drawing.Size(216, 28);
+            this.OpenProjectItem.Size = new System.Drawing.Size(198, 28);
             this.OpenProjectItem.Text = "Open";
             // 
             // SaveMenuItem
@@ -306,14 +306,14 @@
             this.SaveMenuItem.Name = "SaveMenuItem";
             this.SaveMenuItem.ShortcutKeyDisplayString = "Ctrl+S";
             this.SaveMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.SaveMenuItem.Size = new System.Drawing.Size(216, 28);
+            this.SaveMenuItem.Size = new System.Drawing.Size(198, 28);
             this.SaveMenuItem.Text = "Save";
             // 
             // toolsToolStripMenuItem
             // 
             this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.appearanceToolStripMenuItem,
-            this.settingsToolStripMenuItem});
+            this.SettingsMenuItem});
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
             this.toolsToolStripMenuItem.Size = new System.Drawing.Size(60, 27);
             this.toolsToolStripMenuItem.Text = "Tools";
@@ -336,12 +336,13 @@
             this.lightToolStripMenuItem.Size = new System.Drawing.Size(124, 28);
             this.lightToolStripMenuItem.Text = "Light";
             // 
-            // settingsToolStripMenuItem
+            // SettingsMenuItem
             // 
-            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.S)));
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(216, 28);
-            this.settingsToolStripMenuItem.Text = "Settings";
+            this.SettingsMenuItem.Name = "SettingsMenuItem";
+            this.SettingsMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.S)));
+            this.SettingsMenuItem.Size = new System.Drawing.Size(216, 28);
+            this.SettingsMenuItem.Text = "Settings";
+            this.SettingsMenuItem.Click += new System.EventHandler(this.SettingsMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -403,7 +404,7 @@
         private System.Windows.Forms.ToolStripMenuItem OpenProjectItem;
         private System.Windows.Forms.ToolStripMenuItem SaveMenuItem;
         private System.Windows.Forms.ToolStripMenuItem lightToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem SettingsMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
     }
 }
